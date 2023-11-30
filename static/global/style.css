@@ -8,3 +8,10 @@ body {
   color: #000000;
   text-align: center;
 }
+.success
+{
+  background-color: #22bb33;
+  padding: 2%;
+  margin: 2%;
+  border-radius: 10px;
+}
