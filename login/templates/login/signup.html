@@ -1,0 +1,8 @@
+{% extends "base.html" %} 
+{% block content %}
+<form style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);" method="post" action="{% url 'signup_view' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Sign up</button>
+</form>
+{% endblock %}  
