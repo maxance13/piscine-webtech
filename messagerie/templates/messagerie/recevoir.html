@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 {% block title %}messagerie{% endblock %}
 {% block content %}
-
+<h1>Recevoir</h1>
+{% for message in received_messages %}
+  <p>{{ message.sender }} - {{ message.subject }} - {{ message.timestamp }}</p>
+{% endfor %}
 {% endblock %}

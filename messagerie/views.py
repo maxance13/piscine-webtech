@@ -6,7 +6,7 @@ from .forms import MessageForm
 @login_required
 def recevoir(request):
     received_messages = Message.objects.filter(recipient=request.user)
-    return render(request, 'recevoir.html', {'received_messages': received_messages})
+    return render(request, 'messagerie/recevoir.html', {'received_messages': received_messages})
 
 @login_required
 def envoyer(request):
@@ -16,7 +16,7 @@ def envoyer(request):
             message = form.save(commit=False)
             message.sender = request.user
             message.save()
-            return redirect('inbox')
+            return redirect('recevoir')
     else:
         form = MessageForm()
-    return render(request, 'envoyer.html', {'form': form})
+    return render(request, 'messagerie/envoyer.html', {'form': form})
