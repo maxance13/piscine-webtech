@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}messagerie{% endblock %}
+{% block content %}
+<h1>Envoyer</h1>
+<form method="post" action="{% url 'envoyer' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Envoyer">
+</form>
+{% endblock %}

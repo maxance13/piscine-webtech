@@ -21,7 +21,7 @@ def signup_view(request):
         form = CustomUserCreationForm()
 
     return render(request, 'login/signup.html', {'form': form})
-  
+
 def login_view(request):
     if request.method == 'POST':
         form = AuthenticationForm(request, request.POST)
@@ -36,4 +36,4 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
-    return redirect('..'),HttpResponse("Vous vous êtes déconnecté avec succès.") 
+    return redirect('..')
