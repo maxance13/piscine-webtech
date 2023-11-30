@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Contact{% endblock %}
+{% block content %}
+
+<form>
+    <div class="form-group">
+        <label for="exampleInputFirstName">Prénom</label>
+        <input type="text" class="form-control" id="exampleInputFirstName" placeholder="Votre prénom">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputLastName">Nom</label>
+        <input type="text" class="form-control" id="exampleInputFirstName" placeholder="Votre nom">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Adresse Mail</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Votre adresse-mail">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputMessage">Message</label>
+        <textarea class="form-control" id="exampleInputMessage" placeholder="Votre message"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
