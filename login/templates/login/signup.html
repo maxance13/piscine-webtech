@@ -1,8 +1,10 @@
 {% extends "base.html" %} 
+{% block title %}S'enregistrer{% endblock %}
 {% block content %}
 <form style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);" method="post" action="{% url 'signup_view' %}">
   {% csrf_token %}
   {{ form.as_p }}
-  <button type="submit">Sign up</button>
+  <button type="submit">s'enregistrer</button>
 </form>
+<p>Déja un compte? <a href="{% url 'login_view' %}">Se connecter</a></p>
 {% endblock %}  
