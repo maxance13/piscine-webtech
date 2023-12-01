@@ -5,17 +5,15 @@
       <a class="nav-link active rounded-5" aria-selected="false" href="">accueil</a>
     </li>
     <li>
-      <a class="nav-link rounded-5" aria-selected="false" href="">contact</a>
+      <a class="nav-link active rounded-5" aria-selected="false" href="{% url 'contact' %}">contact</a>
     </li>
-    <li><a class="nav-link rounded-5" aria-selected="false" href="{% url 'recevoir' %}">Messagerie</a></li>
+    <li><a class="nav-link active action rounded-5" aria-selected="false" href="{% url 'recevoir' %}">Messagerie</a></li>
     {% if user.is_authenticated %}
-      <li class="ms-auto"><a class="nav-link rounded-4" href="{% url 'logout_view' %}">Déconnexion</a></li>
+      <li class="justify-content-end"><a class="nav-link active rounded-4" href="{% url 'logout_view' %}">Déconnexion</a></li>
     {% else %}
-      <div class="ms-auto">
-        <li><a class="nav-link rounded-4" href="{% url 'login_view' %}">Connexion</a></li>
-        <li><a class="nav-link rounded-4" href="{% url 'signup_view' %}">Inscription</a></li>
-      </div>
+        <li class="login"><a class="nav-link rounded-4" href="{% url 'login_view' %}">Connexion</a></li>
+        <li class="login"><a class="nav-link rounded-4" href="{% url 'signup_view' %}">Inscription</a></li>
     {% endif %}
   </ul>
 {% endblock %}
-</header>  
+</header>   

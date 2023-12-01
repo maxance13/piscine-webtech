@@ -5,8 +5,11 @@ from .forms import MessageForm
 
 @login_required
 def recevoir(request):
-    received_messages = Message.objects.filter(recipient=request.user)
-    return render(request, 'messagerie/recevoir.html', {'received_messages': received_messages})
+    if request.user.is_authenticated:
+        received_messages = Message.objects.filter(recipient=request.user)
+        return render(request, 'messagerie/recevoir.html', {'received_messages': received_messages})
+    else :
+        return redirect( 'login_view')
 
 @login_required
 def envoyer(request):
