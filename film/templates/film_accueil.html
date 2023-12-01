@@ -63,7 +63,7 @@
                   <a href="{% url 'blog_detail' post.id %}" class="btn btn-primary">Voir Plus</a>
               </div>
               <div class="card-footer text-muted">
-                  Posted by {{ post.author.get_full_name }} on {{ post.published_date|date:"Y-m-d" }}
+                  poster par:{{ post.author.get_full_name }} on {{ post.published_date|date:"Y-m-d" }}
               </div>
           </div>
       </div>

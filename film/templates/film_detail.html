@@ -6,22 +6,22 @@
     <div class="film-header">
         <h1 class="film-title">{{ movie.title }}</h1>
         <div class="film-meta">
-            <span class="film-release-date">Release Date: {{ movie.release_date }}</span>
-            <span class="film-runtime">Runtime: {{ movie.runtime }} minutes</span>
-            <span class="film-rating">Rating: {{ movie.vote_average }}/10</span>
+            <span class="film-release-date">Date de sortie: {{ movie.release_date }}</span>
+            <span class="film-runtime">Durée: {{ movie.runtime }} minutes</span>
+            <span class="film-rating">Note: {{ movie.vote_average }}/10</span>
         </div>
     </div>
     <div class="film-body">
         <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="{{ movie.title }}" class="film-poster">
         <div class="film-overview">
-            <h2>Overview</h2>
+            <h2>Résumé</h2>
             <p>{{ movie.overview }}</p>
         </div>
         <div class="film-additional-info">
-            <h3>Additional Information</h3>
-            <p>Tagline: {{ movie.tagline }}</p>
+            <h3>Information Additionel</h3>
+            <p>Tag: {{ movie.tagline }}</p>
             <p>Genres: {% for genre in movie.genres %}{{ genre.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
-            <p>Production Countries: {% for country in movie.production_countries %}{{ country.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+            <p>Pays de production: {% for country in movie.production_countries %}{{ country.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
         </div>
     </div>
 </div>
