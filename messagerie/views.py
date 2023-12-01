@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import Message
 from .forms import MessageForm
@@ -20,3 +20,8 @@ def envoyer(request):
     else:
         form = MessageForm()
     return render(request, 'messagerie/envoyer.html', {'form': form})
+  
+@login_required
+def voir(request, message_id):
+    message = get_object_or_404(Message, id=message_id)
+    return render(request, 'messagerie/voir.html', {'message': message})

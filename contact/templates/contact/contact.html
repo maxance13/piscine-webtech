@@ -2,22 +2,28 @@
 {% block title %}Contact{% endblock %}
 {% block content %}
 
-<form>
+<form action="{% url 'contact' %}" method="POST">
+    {%csrf_token%}
+    {%if message_sent%}
+        <div class="success" role="alert">
+            Message envoyé avec succés
+        </div>
+    {%endif%}
     <div class="form-group">
         <label for="exampleInputFirstName">Prénom</label>
-        <input type="text" class="form-control" id="exampleInputFirstName" placeholder="Votre prénom">
+        <input type="text" name="prenom" class="form-control" id="exampleInputFirstName" placeholder="Votre prénom">
     </div>
     <div class="form-group">
         <label for="exampleInputLastName">Nom</label>
-        <input type="text" class="form-control" id="exampleInputFirstName" placeholder="Votre nom">
+        <input type="text" name="nom" class="form-control" id="exampleInputFirstName" placeholder="Votre nom">
     </div>
     <div class="form-group">
         <label for="exampleInputEmail1">Adresse Mail</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Votre adresse-mail">
+        <input type="email" name="mail" class="form-control" id="exampleInputEmail1" placeholder="Votre adresse-mail">
     </div>
     <div class="form-group">
         <label for="exampleInputMessage">Message</label>
-        <textarea class="form-control" id="exampleInputMessage" placeholder="Votre message"></textarea>
+        <textarea class="form-control" name="message" id="exampleInputMessage" placeholder="Votre message"></textarea>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>

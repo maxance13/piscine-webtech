@@ -11,3 +11,7 @@ class Message(models.Model):
 
     def __str__(self):
         return f"{self.sender} to {self.recipient}: {self.subject}"
+      
+    def marquer_com_lu(self):
+        self.is_read = True
+        self.save()
