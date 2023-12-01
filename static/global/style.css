@@ -1,10 +1,39 @@
 body {
-  background-color: #000000;
+  background-color: #ffffff;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: rgb(200, 0, 255);
+  color: rgb(0, 0, 0);
   text-align: center;
 }
+
+.footer {
+  background-color: #0778e9; 
+  color: #dcdcdc; 
+}
+
+.footer h5 {
+  color: #fff; 
+  margin-bottom: 15px; 
+}
+
+.footer p, .footer a {
+  font-size: 0.9rem; 
+}
+
+.footer a.footer-link {
+  color: #dcdcdc; 
+  text-decoration: none;
+}
+
+.footer a.footer-link:hover {
+  color: #fff; 
+}
+
+.footer ul {
+  padding-left: 0; 
+  list-style-type: none; 
+}
+

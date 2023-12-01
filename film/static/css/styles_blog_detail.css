@@ -1,0 +1,49 @@
+.blog-detail-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.blog-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.blog-content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.comment-section {
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+}
+
+.comment {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dotted #ccc;
+}
+
+.comment-author {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.comment-text {
+    font-size: 0.9rem;
+}
+
+.comment-form {
+    margin-top: 20px;
+}
+
+.login-prompt {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.login-prompt a {
+    color: #007bff;
+}
